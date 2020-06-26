@@ -1,8 +1,6 @@
 resource "aws_security_group" "FrontEnd" {
   name = "FrontEnd"
-  tags {
-        Name = "FrontEnd"
-  }
+  
   description = "ONLY HTTP CONNECTION INBOUD"
   vpc_id = "${aws_vpc.shekhar.id}"
 
