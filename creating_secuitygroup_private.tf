@@ -1,8 +1,5 @@
 resource "aws_security_group" "Database" {
   name = "Database"
-  tags {
-        Name = "Database"
-  }
   description = "ONLY tcp CONNECTION INBOUND"
   vpc_id = "${aws_vpc.shekhar.id}"
   ingress {
