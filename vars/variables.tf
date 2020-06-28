@@ -14,12 +14,12 @@ variable "AmiLinux" {
 
 
 variable "aws_access_key" {
-  default = "put you access_key"
+  default = "AKIAII"
   description = "the user aws access key"
 }
 
 variable "aws_secret_key" {
-  default = "put here your secrete key"
+  default = "TttWDcT8n"
   description = "the user aws secret key"
 }
 
@@ -43,6 +43,6 @@ variable "Subnet_Private" {
   description = "the cidr of the subnet"
 }
 variable "key_name" {
-  default = "gsg-keypair"
+  default = "devops1"
   description = "the ssh key to use in the EC2 machines"
 }

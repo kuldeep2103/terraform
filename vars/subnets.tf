@@ -1,7 +1,7 @@
 resource "aws_subnet" "Public" {
   vpc_id = "${aws_vpc.MyVpc.id}"
   cidr_block = "${var.Subnet_Public}"
-  tags {
+  tags = {
         Name = "Public"
   }
  availability_zone = "${data.aws_availability_zones.available.names[0]}"
@@ -13,7 +13,7 @@ resource "aws_route_table_association" "Public" {
 resource "aws_subnet" "Private" {
   vpc_id = "${aws_vpc.MyVpc.id}"
   cidr_block = "${var.Subnet_Private}"
-  tags {
+  tags = {
         Name = "Private"
   }
   availability_zone = "${data.aws_availability_zones.available.names[1]}"

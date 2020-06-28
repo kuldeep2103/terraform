@@ -4,7 +4,7 @@ data "aws_availability_zones" "available" {}
 /* EXTERNAL NETWORG , IG, ROUTE TABLE */
 resource "aws_internet_gateway" "gw" {
    vpc_id = "${aws_vpc.MyVpc.id}"
-    tags {
+    tags = {
         Name = "internet gw terraform generated"
     }
 }
@@ -26,13 +26,13 @@ resource "aws_network_acl" "all" {
         from_port = 0
         to_port = 0
     }
-    tags {
+    tags = {
         Name = "open acl"
     }
 }
 resource "aws_route_table" "RT_Public" {
   vpc_id = "${aws_vpc.MyVpc.id}"
-  tags {
+  tags = {
       Name = "RT_Public"
   }
   route {
@@ -42,7 +42,7 @@ resource "aws_route_table" "RT_Public" {
 }
 resource "aws_route_table" "RT_Private" {
   vpc_id = "${aws_vpc.MyVpc.id}"
-  tags {
+  tags = {
       Name = "RT"
   }
   route {

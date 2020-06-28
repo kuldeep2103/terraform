@@ -1,6 +1,6 @@
 resource "aws_security_group" "FrontEnd" {
   name = "FrontEnd"
-  tags {
+  tags = {
         Name = "FrontEnd"
   }
   description = "ONLY HTTP CONNECTION INBOUD"
@@ -28,7 +28,7 @@ resource "aws_security_group" "FrontEnd" {
 
 resource "aws_security_group" "Database" {
   name = "Database"
-  tags {
+  tags = {
         Name = "Database"
   }
   description = "ONLY tcp CONNECTION INBOUND"
